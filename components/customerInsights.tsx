@@ -28,7 +28,6 @@ interface ClientTutorItem {
 
 interface SalesDataItem {
   title: string;
-  img: string;
   points: string[];
 }
 

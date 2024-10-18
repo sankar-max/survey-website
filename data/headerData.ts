@@ -27,7 +27,7 @@ export const headerData = [
       {
         title: "Workplace Engagement",
         description: "Boost employee motivation and retention effectively.",
-        href: "/",
+        href: "/nav/workplaceEngagement",
         icon: SiWorkplace,
       },
       {
