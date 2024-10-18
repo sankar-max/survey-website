@@ -21,7 +21,7 @@ export const headerData = [
         title: "Patient Care",
         description:
           "Improve patient satisfaction and overall care experience.",
-        href: "/",
+        href: "/nav/patientCare",
         icon: GrUserExpert,
       },
       {

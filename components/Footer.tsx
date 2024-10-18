@@ -9,7 +9,7 @@ const Footer = () => {
         {footerData.map((item) => {
           return (
             <Li key={item.title} className="space-y-2">
-              <P className="text-base font-medium uppercase">{item.title}</P>
+              <P className="text-base font-bold uppercase">{item.title}</P>
               <ul className="space-y-2">
                 {item.links.map((subItem) => (
                   <Li
