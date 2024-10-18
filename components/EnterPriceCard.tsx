@@ -17,7 +17,7 @@ export const EnterPriceCard = ({ item }: Props) => {
           {item.title}
         </CardTitle>
         <CardContent className="pl-8">
-          <P className="text-xl">{item.description}</P>
+          <P className="">{item.description}</P>
         </CardContent>
       </CardHeader>
     </Card>

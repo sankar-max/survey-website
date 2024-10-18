@@ -72,26 +72,26 @@ const patientSecondData = [
   {
     id: 1,
     title: "We always prioritise your security",
-    icon: MdOutlineHealthAndSafety,
-    description:
-      "Adheres to the highest standards of IT security and data protection. Put powerful customer insight in the hands of your operational teams, use APIs, webhooks or our native Salesforce integration to share feedback in the systems they already work in.",
+    img: "/staysafe.svg",
+    content:
+      "Adheres to the highest standards of IT security and data protection Put powerful customer insight in the hands of your operational teams, use APIs, web hooks or our native Salesforce integration to share feedback in the systems they already work in Complies with GDPR, the Data protection Act and the NHS Data Security and Protection Toolkit Is built by a software provider that is ISO27001 and Cyber Essentials Plus accredited",
   },
   {
-    id: 2,
+    id: 1,
     title: "Smart security features for teams",
-    icon: RiHealthBookLine,
-    description:
-      "Access control tools including Two-Factor Authentication (2FA) and password policies. Team management features that include user permissions and a master user who can manage these permissions and the activities of sub-user accounts.",
+    img: "/smartsecurity.svg",
+    content:
+      "Access control tools including Two-Factor Authentication (2FA) and password policies Team management features that include user permissions and a master user who can manage these permissions and the activities of sub-user accounts Password protection on survey report links that your teams share with others, so that its content can only be seen by those who need to view it",
   },
   {
-    id: 3,
-    title: "Drive more coordinated action and engagement",
-    icon: RiHomeOfficeLine,
-    description:
-      "Create custom stakeholder reports and share real-time access to user stories and insight, without need for additional user licenses. Empower team members to work more effectively and seamlessly together through detailed user permissions.",
+    id: 1,
+    title: "Drive more co-ordinated action and engagement",
+    img: "/Drivemoreco-ordinated.svg",
+    content:
+      "Create custom stakeholder reports and share real-time access to user stories and insight, without need for additional user licences Set up project teams of all shapes and sizes for success with the means to share templates, themes, and your preferred questions Empower team members to work more effectively and seamlessly together through detailed user permissions",
   },
 ];
-
+    
 export default function PatientCare() {
   return (
     <>
