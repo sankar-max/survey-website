@@ -33,7 +33,7 @@ export const headerData = [
       {
         title: "Market Research",
         description: "Leverage insights to drive smart business strategies.",
-        href: "/",
+        href: "/nav/marketResearch",
         icon: SquareLibrary,
       },
     ],
