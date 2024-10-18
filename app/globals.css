@@ -21,7 +21,11 @@ html {
     text-wrap: balance;
   }
 }
-
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
 @layer base {
   :root {
     --background: 216 100% 100%;

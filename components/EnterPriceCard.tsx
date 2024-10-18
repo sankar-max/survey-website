@@ -9,15 +9,15 @@ type Props = {
 export const EnterPriceCard = ({ item }: Props) => {
   return (
     <Card>
-      <CardHeader className="space-y-5">
-        <CardTitle className="flex items-center gap-x-4">
+      <CardHeader className="space-y-3">
+        <CardTitle className="flex items-center gap-x-4 font-bold">
           <span>
-            <item.icon size={23} />
+            <item.icon className="size-7 text-blue-500" />
           </span>
           {item.title}
         </CardTitle>
         <CardContent className="pl-8">
-          <P className="text-lg">{item.description}</P>
+          <P className="text-xl">{item.description}</P>
         </CardContent>
       </CardHeader>
     </Card>

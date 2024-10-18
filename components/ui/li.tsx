@@ -1,12 +1,20 @@
 import { cn } from "@/lib/utils";
-import { ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 
 type Props = {
   children: ReactNode;
-};
+} & ComponentProps<"li">;
 
-export const Li = ({ children }: Props) => {
+export const Li = ({ children, className, ...rest }: Props) => {
   return (
-    <li className={cn("h-full text-black dark:text-white")}>{children}</li>
+    <li
+      {...rest}
+      className={cn(
+        "h-full font-zetta-font text-xl text-black dark:text-white",
+        className,
+      )}
+    >
+      {children}
+    </li>
   );
 };

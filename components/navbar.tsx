@@ -9,7 +9,7 @@ import { HeaderListItem } from "./headerListItem";
 
 const Navbar = () => {
   return (
-    <div className="sticky border-b shadow-2xl">
+    <div className="sticky top-0 z-[100] border-b bg-white shadow-2xl dark:bg-black">
       <div className="container flex h-16 items-center justify-between">
         <div className="hidden h-full items-center gap-x-7 md:flex">
           <Link href={"/"} className="flex h-full items-center justify-center">
@@ -23,12 +23,12 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-x-6">
           <ThemeSwitcher />
-          <div className="flex items-center gap-x-2">
+          <Link href={"/sign-up"} className="flex items-center gap-x-2">
             <Button variant={"secondary"} className="">
               Sign in
             </Button>
             <Button>Sign up</Button>
-          </div>
+          </Link>
         </div>
       </div>
     </div>

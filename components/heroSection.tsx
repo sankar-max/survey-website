@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { H1 } from "@/components/ui/h1";
 import { P } from "@/components/ui/p";
+import { HeroImage } from "@/public/assets/images/hero";
 import { ArrowRight } from "lucide-react";
 export const HeroSection = () => {
   return (
-    <div className="container grid place-items-center py-20 md:py-44">
-      <div className="grid grid-cols-4">
+    <div className="container grid place-items-center py-20 lg:py-40">
+      <div className="grid items-center gap-x-2 gap-y-7 md:grid-cols-7">
         <div className="col-span-3 space-y-7">
           <H1>A Better Future Uncover the difference you will make.</H1>
           <P className="">
@@ -28,6 +29,11 @@ export const HeroSection = () => {
                 </span>
               </Button>
             </a>
+          </div>
+        </div>
+        <div className="col-span-4">
+          <div className="h-full w-full">
+            <HeroImage />
           </div>
         </div>
       </div>

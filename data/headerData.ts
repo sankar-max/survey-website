@@ -14,7 +14,7 @@ export const headerData = [
       {
         title: "Customer Insights",
         description: "Enhance customer loyalty through deep understanding.",
-        href: "/",
+        href: "/nav/customerInsights",
         icon: RiCustomerService2Line,
       },
       {

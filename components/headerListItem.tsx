@@ -58,17 +58,16 @@ export const HeaderListItem = ({ item }: Props) => {
           onMouseLeave={handleMouseLeave}
         >
           {item.dropdown.map((subItem, index) => (
-            <>
-              <DropdownMenuGroup
-                key={`${item.name}-${index}`}
-                className="flex cursor-pointer items-center gap-x-2 px-0 pl-2 hover:bg-accent"
-              >
+            <Link href={subItem.href} key={`${item.name}-${index}`}>
+              <DropdownMenuGroup className="flex cursor-pointer items-center gap-x-2 px-0 pl-2 hover:bg-popover">
                 <Button variant={"secondary"} className="shrink-0" size={"xs"}>
                   <subItem.icon size={16} />
                 </Button>
-                <div className="">
-                  <DropdownMenuLabel>{subItem.title}</DropdownMenuLabel>
-                  <DropdownMenuItem className="cursor-pointer focus:bg-transparent">
+                <div className="py-1">
+                  <DropdownMenuLabel className="">
+                    {subItem.title}
+                  </DropdownMenuLabel>
+                  <DropdownMenuItem className="cursor-pointer py-0 focus:bg-transparent">
                     {subItem.description}
                   </DropdownMenuItem>
                 </div>
@@ -76,7 +75,7 @@ export const HeaderListItem = ({ item }: Props) => {
               {item.dropdown.length - 1 !== index && (
                 <DropdownMenuSeparator className="" />
               )}
-            </>
+            </Link>
           ))}
         </DropdownMenuContent>
       </DropdownMenu>
