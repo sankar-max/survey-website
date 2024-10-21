@@ -1,9 +1,9 @@
-import React from 'react'
-import { H1 } from './ui/h1';
-import { P } from './ui/p';
-import { Button } from './ui/button';
-import { ArrowRight } from 'lucide-react';
-import Image from 'next/image';
+import React from "react";
+import { H1 } from "./ui/h1";
+import { P } from "./ui/p";
+import { Button } from "./ui/button";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import {
   Card,
   CardHeader,
@@ -11,7 +11,7 @@ import {
   CardDescription,
   CardContent,
 } from "@/components/ui/card";
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 
 interface ClientTutorItem {
   title: string;
@@ -89,7 +89,7 @@ export default function MarketResearchDesign({
         ))}
       </div>
 
-      <div className="space-y-10 text-center">
+      <div className="space-y-10 py-20 text-center">
         <div className="space-y-5">
           <H1>Connect with your customers effectively</H1>
           <div className="">
@@ -111,8 +111,8 @@ export default function MarketResearchDesign({
         </div>
       </div>
 
-      <div className="space-y-5">
-        <H1>Reach the right audience for your research</H1>
+      <div className="space-y-5 py-20 text-center">
+        <H1 className="">Reach the right audience for your research</H1>
         <div className="">
           <P>
             ZettaSurvey’s Live Consumer Audience service gives you instant

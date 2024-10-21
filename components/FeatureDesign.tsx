@@ -2,7 +2,6 @@ import { featureData } from "@/data/featuresData";
 import { cn } from "@/lib/utils";
 import { P } from "./ui/p";
 import { H4 } from "./ui/h4";
-import { CardDescription } from "./ui/card";
 
 type Props = {
   item: (typeof featureData)[number];

@@ -10,7 +10,7 @@ export const EnterPriceCard = ({ item }: Props) => {
   return (
     <Card>
       <CardHeader className="space-y-3">
-        <CardTitle className="flex items-center gap-x-4 font-bold">
+        <CardTitle className="flex items-center gap-x-4 !text-xl font-bold">
           <span>
             <item.icon className="size-7 text-blue-500" />
           </span>

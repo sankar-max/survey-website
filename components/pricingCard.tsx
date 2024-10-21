@@ -52,7 +52,7 @@ export const PricingPlan = ({ data }: Props) => {
   ];
   return (
     <div className="h-full overflow-x-auto overflow-y-auto pb-20 text-center">
-      <H1 className="pb-6 text-center !text-4xl font-bold !text-black">
+      <H1 className="pb-6 text-center !text-3xl font-bold !text-black">
         Choose a plan that works best for you
       </H1>
       <div className="grid grid-cols-1 gap-8 pt-1 md:grid-cols-2">

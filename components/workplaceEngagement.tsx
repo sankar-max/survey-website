@@ -6,13 +6,7 @@ import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import { H4 } from "./ui/h4";
 import { cn } from "@/lib/utils";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 
 interface workFirstDataDataItem {
   title: string;
@@ -98,7 +92,7 @@ export default function WorkplaceEngagementDesign({
               "rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 shadow-md",
             )}
           >
-            <CardHeader className="flex items-center">
+            <CardHeader className="flex items-center !text-black">
               <div className="ml-3">
                 <CardTitle className="flex items-center gap-x-3 font-bold">
                   {item.title}

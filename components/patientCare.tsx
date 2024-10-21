@@ -85,7 +85,7 @@ export function PatientCareDesign({
             </P>
           </div>
         </div>
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="container flex flex-wrap justify-center gap-6">
           {patientFirstData.map((item, index) => (
             <Card
               key={index}
@@ -94,7 +94,7 @@ export function PatientCareDesign({
                 "rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 shadow-md",
               )}
             >
-              <CardHeader className="flex items-center">
+              <CardHeader className="flex items-center !text-black">
                 <div className="ml-3">
                   <CardTitle className="flex items-center gap-x-3 font-bold">
                     <item.icon className="size-7 text-blue-500" />

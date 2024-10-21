@@ -52,9 +52,7 @@ const imageList = [
 const SignUpCard = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [planData, setPlanData] = useState<PlanPriceT | []>([]);
-  const [currentFormIndex, setCurrentFormIndex] = useState(
-    signUpData.length - 2,
-  );
+  const [currentFormIndex, setCurrentFormIndex] = useState(0);
   const progress = ((currentFormIndex + 1) / signUpData.length) * 100;
 
   const form = useForm<signUpForm>({
@@ -199,7 +197,7 @@ const SignUpCard = () => {
     <div className="absolute top-0 z-[-2] grid h-screen w-screen place-items-center bg-gradient-to-r from-gray-800 to-teal-400">
       <div className="grid h-full max-h-full grid-cols-5 overflow-hidden rounded-3xl p-3 md:self-center">
         <div className="col-span-2 grid h-full place-items-center">
-          <div className="relative size-[600px]">
+          <div className="relative">
             <ImageCarousel />
           </div>
         </div>
@@ -228,7 +226,7 @@ const SignUpCard = () => {
                 </Link>
                 {currentFormIndex === 0 && (
                   <div className="space-y-5">
-                    <H1 className="!text-5xl !font-bold !text-black dark:text-black">
+                    <H1 className="!text-4xl !font-bold !text-black dark:text-black">
                       Sign up
                     </H1>
                     <p className="text-lg font-medium !text-black">
@@ -276,27 +274,15 @@ const SignUpCard = () => {
               </div>
             </div>
             <div className="flex justify-end px-10">
-              {currentFormIndex === 0 && (
-                <div className="">
-                  <Button
-                    onClick={handleNext}
-                    className="bg-gradient-to-r from-gray-800 to-teal-400"
-                  >
-                    Continue
-                    <ArrowRight className="ml-2" />
-                  </Button>
-                </div>
-              )}
-              {currentFormIndex !== 0 &&
-                currentFormIndex < signUpData.length - 1 && (
-                  <Button
-                    className="bg-gradient-to-r from-gray-800 to-teal-400"
-                    type="button"
-                    onClick={handleNext}
-                  >
-                    <ArrowRight />
-                  </Button>
-                )}
+              <div className="">
+                <Button
+                  onClick={handleNext}
+                  className="bg-gradient-to-r from-gray-800 to-teal-400"
+                >
+                  Continue
+                  <ArrowRight className="ml-2" />
+                </Button>
+              </div>
             </div>
           </form>
         </Form>
@@ -334,7 +320,7 @@ function ImageCarousel() {
             }}
           >
             <div className="flex justify-center">
-              <Image height={400} width={700} alt="img" src={img.url} />
+              <Image height={300} width={400} alt="img" src={img.url} />
             </div>
             <P className="rounded-md bg-slate-900/30 p-5 !text-white">
               {img.text}

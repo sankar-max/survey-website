@@ -1,9 +1,6 @@
 import React from "react";
 import { CalendarPlus, ChartNoAxesCombined, LibraryBig } from "lucide-react";
-import PatientCareDesign from "../customerInsights";
 import CustomerInsightsDesign from "../customerInsights";
-
-
 
 const clientTutorData = [
   {
@@ -98,6 +95,9 @@ const salesData = [
 
 export default function customerInsights() {
   return (
-    <CustomerInsightsDesign clientTutorData={clientTutorData} salesData={salesData} />
+    <CustomerInsightsDesign
+      clientTutorData={clientTutorData}
+      salesData={salesData}
+    />
   );
 }

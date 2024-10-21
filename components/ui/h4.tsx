@@ -10,7 +10,7 @@ export const H4 = ({ children, className, ...rest }: Props) => {
     <h1
       {...rest}
       className={cn(
-        "text-2xl font-semibold leading-none tracking-tight text-black dark:text-white",
+        "text-2xl font-bold leading-none tracking-tight text-black dark:text-white",
         className,
       )}
     >

@@ -45,7 +45,7 @@ export const SelectField = <T extends FieldValues>({
             <FormControl>
               <RadioGroupItem className="" value={option} />
             </FormControl>
-            <FormLabel className="font-normal">{option}</FormLabel>
+            <FormLabel className="text-lg font-normal">{option}</FormLabel>
           </FormItem>
         ))}
       </RadioGroup>

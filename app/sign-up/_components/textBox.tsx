@@ -39,7 +39,7 @@ export const TextBox = <T extends FieldValues>({
           <Input
             placeholder="Enter your email"
             className={cn(
-              "border-primary py-6 text-2xl text-black dark:text-black",
+              "border-primary py-6 text-lg text-black dark:text-black",
               type !== "file" && "pl-10",
             )}
             type={type}
