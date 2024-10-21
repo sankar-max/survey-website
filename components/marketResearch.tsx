@@ -17,31 +17,34 @@ interface ClientTutorItem {
   description: string;
 }
 
-// interface SalesDataItem {
-//   title: string;
-//   img: string;
-//   points: string[];
-// }
-
-interface SurveyService {
+interface markThirddata {
   id: number;
   title: string;
   description: string;
   icon: React.ElementType;
 }
 
+interface MarkCarddata {
+  id: number;
+  title: string;
+  icon: IconType;
+  description: string;
+}
 interface PatientCareDesignProps {
   markSeconddata: ClientTutorItem[];
-  surveyServices: SurveyService[];
+  markThirddata: markThirddata[];
+  markCarddata: MarkCarddata[];
 }
 
 import marketres from "@/public/marketimages/paperwork (1).jpg";
 import marketres2 from "@/public/marketimages/business-concept-discussing-graphs-showing-results-their.jpg";
 import marketres3 from "@/public/marketimages/colleagues-working-together-financial-report-using-modern-gadget.jpg";
 import { H4 } from "./ui/h4";
+import { IconType } from "react-icons/lib";
 export default function MarketResearchDesign({
   markSeconddata,
-  surveyServices,
+  markThirddata,
+  markCarddata,
 }: PatientCareDesignProps) {
   return (
     <div className="container">
@@ -128,7 +131,7 @@ export default function MarketResearchDesign({
             </H4>
             <P>Get accurate insights to make informed decisions</P>
           </div>
-          {surveyServices.map((item, index) => (
+          {markThirddata.map((item, index) => (
             <div key={index}>
               <div className="">
                 <div className="flex items-center gap-x-3 pt-5 font-bold">
@@ -144,9 +147,9 @@ export default function MarketResearchDesign({
         </div>
       </div>
 
-      <div className="space-y-10 text-center">
-        <div className="space-y-5">
-          <H1 className="px-36">Connect with your customers effectively</H1>
+      <div className="space-y-10">
+        <div className="space-y-5 text-center">
+          <H1 >Connect with your customers effectively</H1>
           <div className="">
             <P>
               Distribute mobile responsive customer satisfaction surveys via web
@@ -159,10 +162,28 @@ export default function MarketResearchDesign({
             <P>anytime, anywhere.</P>
           </div>
         </div>
-        <div className="col-span-4 h-[1200px] w-full">
-          <div className="relative h-full w-full">
-            <Image src="/marketimages/wrokflow.png" alt="hero-image" fill />
-          </div>
+        <div className="flex flex-wrap justify-center gap-6 py-16">
+          {markCarddata.map((item, index) => (
+            <Card
+              key={index}
+              className={cn(
+                "max-w-sm transform p-4 shadow-[-1px_-1px_37px_0px_rgba(0,_0,_0,_0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-2",
+                "rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 shadow-md",
+              )}
+            >
+              <CardHeader className="flex items-center">
+                <div className="ml-3">
+                  <CardTitle className="flex items-center gap-x-3 font-bold">
+                    <item.icon className="size-7 text-blue-500" />
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription className="mt-5 text-lg text-black">
+                    {item.description}
+                  </CardDescription>
+                </div>
+              </CardHeader>
+            </Card>
+          ))}
         </div>
       </div>
 

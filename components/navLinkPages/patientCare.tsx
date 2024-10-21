@@ -77,14 +77,14 @@ const patientSecondData = [
       "Adheres to the highest standards of IT security and data protection Put powerful customer insight in the hands of your operational teams, use APIs, web hooks or our native Salesforce integration to share feedback in the systems they already work in Complies with GDPR, the Data protection Act and the NHS Data Security and Protection Toolkit Is built by a software provider that is ISO27001 and Cyber Essentials Plus accredited",
   },
   {
-    id: 1,
+    id: 2,
     title: "Smart security features for teams",
     img: "/smartsecurity.svg",
     content:
       "Access control tools including Two-Factor Authentication (2FA) and password policies Team management features that include user permissions and a master user who can manage these permissions and the activities of sub-user accounts Password protection on survey report links that your teams share with others, so that its content can only be seen by those who need to view it",
   },
   {
-    id: 1,
+    id: 3,
     title: "Drive more co-ordinated action and engagement",
     img: "/Drivemoreco-ordinated.svg",
     content:

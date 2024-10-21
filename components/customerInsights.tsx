@@ -101,7 +101,7 @@ export default function CustomerInsightsDesign({
         ))}
       </div>
       <div className="container space-y-7 pt-12">
-        {salesData.map((item, ind) => (
+        {salesData.map((item, ind) => ( 
           <div
             key={ind}
             className="grid items-center gap-x-3 gap-y-3 md:grid-cols-2"

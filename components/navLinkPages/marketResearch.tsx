@@ -1,8 +1,14 @@
 import React from "react";
 import MarketResearchDesign from "../marketResearch";
-import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import { HiOutlineChatBubbleLeftRight, HiOutlineLightBulb } from "react-icons/hi2";
 import { VscWorkspaceTrusted } from "react-icons/vsc";
-import { BsBarChart, BsMegaphone } from "react-icons/bs";
+import { BsBarChart, BsMegaphone, BsTelephone } from "react-icons/bs";
+import { MdLiveTv, MdOutlineHealthAndSafety } from "react-icons/md";
+import { CiMobile3 } from "react-icons/ci";
+import { LiaShareAltSolid, LiaSmsSolid } from "react-icons/lia";
+import { GoRepoPush } from "react-icons/go";
+
+import { LuLightbulbOff } from "react-icons/lu";
 
 const markSeconddata = [
   {
@@ -27,7 +33,7 @@ const markSeconddata = [
   },
 ];
 
-const surveyServices = [
+const markThirddata = [
   {
     id: 1,
     title: "Buy survey responses",
@@ -57,12 +63,72 @@ const surveyServices = [
     icon: BsMegaphone,
   },
 ];
+
+ const markCarddata = [
+   {
+     id: 1,
+     title: "Web Intercept",
+     icon: HiOutlineLightBulb,
+     description:
+       "Get real-time feedback from your website visitors with targeted surveys. Trigger them to appear based on the pages visited.",
+   },
+   {
+     id: 2,
+     title: "Offline",
+     icon: LuLightbulbOff,
+     description:
+       "Extend the reach of your surveys by collecting data at the point of experience. Save feedback ready to download when you're connected.",
+   },
+   {
+     id: 3,
+     title: "Mobile",
+     icon: CiMobile3,
+     description:
+       "All surveys created with SmartSurvey software are mobile responsive, Catch people on the move and capture information when it matters.",
+   },
+   {
+     id: 4,
+     title: "Popups",
+     icon: GoRepoPush,
+     description:
+       "Capture information about your business from web site visitors. Use relevant triggers to get opinion directly from the people that matter.",
+   },
+   {
+     id: 5,
+     title: "Kiosk",
+     icon: MdLiveTv,
+     description:
+       "Collect in-the-moment feedback from any location. Gather honest consumer insight at the point of experience, when it matters most.",
+   },
+   {
+     id: 6,
+     title: "Telephone surveys",
+     icon: BsTelephone,
+     description:
+       "Generate unique survey links to get answers on your customer's behalf. Merge results with data gathered elsewhere to build the full picture.",
+   },
+   {
+     id: 7,
+     title: "SMS Invitation ",
+     icon: LiaSmsSolid,
+     description:
+       "Send your survey by SMS and target users on the move. Reach your audience anywhere, at anytime and capture feedback instantly.",
+   },
+   {
+     id: 8,
+     title: "Social Media ",
+     icon: LiaShareAltSolid,
+     description:
+       "Engage with like-minded people and collect their feedback. Share surveys directly onto any social media platform and gather opinion fast.",
+   },
+ ];
 export default function MarketResearch() {
   return (
     <div>
       <MarketResearchDesign
         markSeconddata={markSeconddata}
-        surveyServices={surveyServices}
+        markThirddata={markThirddata}
+        markCarddata={markCarddata}
       />
     </div>
   );

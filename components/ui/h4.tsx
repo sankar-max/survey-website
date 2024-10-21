@@ -7,7 +7,7 @@ type Props = {
 
 export const H4 = ({ children, className, ...rest }: Props) => {
   return (
-    <h1
+    <h4
       {...rest}
       className={cn(
         "text-2xl font-bold leading-none tracking-tight text-black dark:text-white",
@@ -15,6 +15,6 @@ export const H4 = ({ children, className, ...rest }: Props) => {
       )}
     >
       {children}
-    </h1>
+    </h4>
   );
 };

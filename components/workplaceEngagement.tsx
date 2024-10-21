@@ -69,7 +69,7 @@ export default function WorkplaceEngagementDesign({
               <H4 className="font-bold">{item?.title}</H4>
               {item.description.map((desc, index) => (
                 <div key={index}>
-                  <P className="font-semibold">{desc.heading}</P>
+                  <P className="font-semibold ">{desc.heading}</P>
                   <P className="text-justify">{desc.subitem}</P>
                 </div>
               ))}
