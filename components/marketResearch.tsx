@@ -9,7 +9,6 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardContent,
 } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 
@@ -24,13 +23,25 @@ interface ClientTutorItem {
 //   points: string[];
 // }
 
+interface SurveyService {
+  id: number;
+  title: string;
+  description: string;
+  icon: React.ElementType;
+}
+
 interface PatientCareDesignProps {
   markSeconddata: ClientTutorItem[];
-  //   salesData: SalesDataItem[];
+  surveyServices: SurveyService[];
 }
+
+import marketres from "@/public/marketimages/paperwork (1).jpg";
+import marketres2 from "@/public/marketimages/business-concept-discussing-graphs-showing-results-their.jpg";
+import marketres3 from "@/public/marketimages/colleagues-working-together-financial-report-using-modern-gadget.jpg";
+import { H4 } from "./ui/h4";
 export default function MarketResearchDesign({
   markSeconddata,
-  salesData,
+  surveyServices,
 }: PatientCareDesignProps) {
   return (
     <div className="container">
@@ -66,7 +77,7 @@ export default function MarketResearchDesign({
         </div>
       </div>
 
-      <div className="flex flex-wrap justify-center gap-6">
+      <div className="flex flex-wrap justify-center gap-6 py-16">
         {markSeconddata.map((item, index) => (
           <Card
             key={index}
@@ -89,9 +100,53 @@ export default function MarketResearchDesign({
         ))}
       </div>
 
-      <div className="space-y-10 py-20 text-center">
+      <div className="flex justify-center gap-x-16 py-16">
+        <div className="relative h-[400px] w-[400px] sm:hidden md:hidden lg:block">
+          <div className="absolute left-[-2rem] top-[-2rem] z-[-1] h-[100px] w-[100px] rounded-full bg-[orangered] shadow-lg"></div>
+          <div className="absolute left-[-9rem] top-[18rem] z-[-1] h-[300px] w-[300px] rounded-full bg-[#342bdd] shadow-lg"></div>
+          <Image
+            src={marketres2}
+            alt=""
+            className="h-full w-full rounded-lg shadow-lg"
+          />
+
+          <Image
+            src={marketres3}
+            alt="marketres"
+            className="absolute left-[-2rem] top-[11rem] h-[300px] w-[300px] rounded-lg shadow-lg"
+          />
+          <Image
+            src={marketres}
+            alt="marketres"
+            className="absolute right-[7rem] top-[24rem] h-[200px] w-[200px] rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="w-[500px] rounded-lg bg-white">
+          <div className="space-y-2">
+            <H4 className="text-[35px] font-bold text-[#263146]">
+              Market research surveys
+            </H4>
+            <P>Get accurate insights to make informed decisions</P>
+          </div>
+          {surveyServices.map((item, index) => (
+            <div key={index}>
+              <div className="">
+                <div className="flex items-center gap-x-3 pt-5 font-bold">
+                  <item.icon className="size-7 text-blue-500" />
+                  <H4> {item.title}</H4>
+                </div>
+                <div className="mt-5 text-lg text-black">
+                  <P>{item.description}</P>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-10 text-center">
         <div className="space-y-5">
-          <H1>Connect with your customers effectively</H1>
+          <H1 className="px-36">Connect with your customers effectively</H1>
           <div className="">
             <P>
               Distribute mobile responsive customer satisfaction surveys via web
@@ -111,8 +166,8 @@ export default function MarketResearchDesign({
         </div>
       </div>
 
-      <div className="space-y-5 py-20 text-center">
-        <H1 className="">Reach the right audience for your research</H1>
+      <div className="space-y-5 py-10 text-center">
+        <H1 className="px-36">Reach the right audience for your research</H1>
         <div className="">
           <P>
             ZettaSurvey’s Live Consumer Audience service gives you instant
