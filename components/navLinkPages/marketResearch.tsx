@@ -1,135 +1,183 @@
 import React from "react";
-import MarketResearchDesign from "../marketResearch";
-import { HiOutlineChatBubbleLeftRight, HiOutlineLightBulb } from "react-icons/hi2";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
-import { BsBarChart, BsMegaphone, BsTelephone } from "react-icons/bs";
-import { MdLiveTv, MdOutlineHealthAndSafety } from "react-icons/md";
-import { CiMobile3 } from "react-icons/ci";
-import { LiaShareAltSolid, LiaSmsSolid } from "react-icons/lia";
-import { GoRepoPush } from "react-icons/go";
+import { H1 } from "@/components/ui/h1";
+import { P } from "@/components/ui/p";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+} from "@/components/ui/card";
+import { cn } from "@/lib/utils";
+import marketres from "@/public/marketimages/paperwork (1).jpg";
+import marketres2 from "@/public/marketimages/business-concept-discussing-graphs-showing-results-their.jpg";
+import marketres3 from "@/public/marketimages/colleagues-working-together-financial-report-using-modern-gadget.jpg";
+import { H4 } from "@/components/ui/h4";
+import {
+  markCarddata,
+  markSeconddata,
+  markThirddata,
+} from "@/data/marketResearch";
 
-import { LuLightbulbOff } from "react-icons/lu";
-
-const markSeconddata = [
-  {
-    title: "43 Built-In Question Types",
-    description:
-      "Collect exactly the data you need with customizable market research question types from multiple choice to Likert Scales.",
-  },
-  {
-    title: "Branching & Skip Logic",
-    description:
-      "Show only the questions and pages that matter to your respondents with easy to design advanced logic.",
-  },
-  {
-    title: "Virtually Unlimited Questions & Responses",
-    description:
-      "Ask as many questions as you want to as many people as you need. No hidden fees or additional charges. Just data.",
-  },
-  {
-    title: "Advanced Reporting Tools",
-    description:
-      "Create and customize advanced reports like TURF, cross tabs, and comparison faster than ever before. Even export directly to SPSS for deeper analysis.",
-  },
-];
-
-const markThirddata = [
-  {
-    id: 1,
-    title: "Buy survey responses",
-    description:
-      "Need people to take your survey but don’t have contacts in your address book? Get responses with our Live Audience service.",
-    icon: HiOutlineChatBubbleLeftRight,
-  },
-  {
-    id: 2,
-    title: "Product development",
-    description:
-      "Review customer feedback on products and services throughout the buying lifecycle to drive improvements.",
-    icon: VscWorkspaceTrusted,
-  },
-  {
-    id: 3,
-    title: "Market trends",
-    description:
-      "Gather accurate data to develop a clear industry picture in order to make smart, informed decisions fast.",
-    icon: BsBarChart,
-  },
-  {
-    id: 4,
-    title: "Brand awareness",
-    description:
-      "Accrue feedback to benchmark your brand against your competitors in order to increase your market share.",
-    icon: BsMegaphone,
-  },
-];
-
- const markCarddata = [
-   {
-     id: 1,
-     title: "Web Intercept",
-     icon: HiOutlineLightBulb,
-     description:
-       "Get real-time feedback from your website visitors with targeted surveys. Trigger them to appear based on the pages visited.",
-   },
-   {
-     id: 2,
-     title: "Offline",
-     icon: LuLightbulbOff,
-     description:
-       "Extend the reach of your surveys by collecting data at the point of experience. Save feedback ready to download when you're connected.",
-   },
-   {
-     id: 3,
-     title: "Mobile",
-     icon: CiMobile3,
-     description:
-       "All surveys created with SmartSurvey software are mobile responsive, Catch people on the move and capture information when it matters.",
-   },
-   {
-     id: 4,
-     title: "Popups",
-     icon: GoRepoPush,
-     description:
-       "Capture information about your business from web site visitors. Use relevant triggers to get opinion directly from the people that matter.",
-   },
-   {
-     id: 5,
-     title: "Kiosk",
-     icon: MdLiveTv,
-     description:
-       "Collect in-the-moment feedback from any location. Gather honest consumer insight at the point of experience, when it matters most.",
-   },
-   {
-     id: 6,
-     title: "Telephone surveys",
-     icon: BsTelephone,
-     description:
-       "Generate unique survey links to get answers on your customer's behalf. Merge results with data gathered elsewhere to build the full picture.",
-   },
-   {
-     id: 7,
-     title: "SMS Invitation ",
-     icon: LiaSmsSolid,
-     description:
-       "Send your survey by SMS and target users on the move. Reach your audience anywhere, at anytime and capture feedback instantly.",
-   },
-   {
-     id: 8,
-     title: "Social Media ",
-     icon: LiaShareAltSolid,
-     description:
-       "Engage with like-minded people and collect their feedback. Share surveys directly onto any social media platform and gather opinion fast.",
-   },
- ];
-export default function MarketResearch() {
+export default function MarketResearchDesign() {
   return (
-    <div>
-      <MarketResearchDesign
-        markSeconddata={markSeconddata}
-        markThirddata={markThirddata}
-        markCarddata={markCarddata}
-      />
+    <div className="container">
+      <div className="grid place-items-center py-16 lg:py-36">
+        <div className="h- grid items-center gap-x-2 gap-y-7 md:grid-cols-7">
+          <div className="col-span-3 space-y-7">
+            <H1>Market Research Get deeper insight</H1>
+            <P className="">
+              For companies of any size, our market research surveys can help
+              gather feedback, measure consumer awareness or assist in the
+              development of new products. Get the insights you need to grow
+              your business fast.
+            </P>
+
+            <div className="flex items-center gap-x-3">
+              <Button className="group">
+                Sign Up
+                <span className="ml-2 text-xl duration-300 group-hover:translate-x-1">
+                  <ArrowRight size={18} />
+                </span>
+              </Button>
+            </div>
+          </div>
+          <div className="col-span-4 h-[400px] w-full">
+            <div className="relative h-full w-full">
+              <Image
+                src="/marketimages/business-team-planning-marketing-strategy.jpg"
+                alt="hero-image"
+                fill
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-6 py-16">
+        {markSeconddata.map((item, index) => (
+          <Card
+            key={index}
+            className={cn(
+              "max-w-sm transform rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-4 shadow-[0px_0px_13px_-1px_rgba(0,_0,_0,_0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-2",
+            )}
+          >
+            <CardHeader className="flex items-center">
+              <div className="ml-3">
+                <CardTitle className="flex items-center gap-x-3 font-bold">
+                  {item.title}
+                </CardTitle>
+                <CardDescription className="mt-5 text-lg text-black">
+                  {item.description}
+                </CardDescription>
+              </div>
+            </CardHeader>
+          </Card>
+        ))}
+      </div>
+
+      <div className="flex justify-center gap-x-16 py-16">
+        <div className="relative h-[400px] w-[400px] sm:hidden md:hidden lg:block">
+          <div className="absolute left-[-2rem] top-[-2rem] z-[-1] h-[100px] w-[100px] rounded-full bg-[orangered] shadow-lg"></div>
+          <div className="absolute left-[-9rem] top-[18rem] z-[-1] h-[300px] w-[300px] rounded-full bg-[#342bdd] shadow-lg"></div>
+          <Image
+            src={marketres2}
+            alt=""
+            className="h-full w-full rounded-lg shadow-lg"
+          />
+
+          <Image
+            src={marketres3}
+            alt="marketres"
+            className="absolute left-[-2rem] top-[11rem] h-[300px] w-[300px] rounded-lg shadow-lg"
+          />
+          <Image
+            src={marketres}
+            alt="marketres"
+            className="absolute right-[7rem] top-[24rem] h-[200px] w-[200px] rounded-lg shadow-lg"
+          />
+        </div>
+        <div className="w-[500px] rounded-lg bg-white">
+          <div className="space-y-2">
+            <H4 className="text-[35px] font-bold text-[#263146]">
+              Market research surveys
+            </H4>
+            <P>Get accurate insights to make informed decisions</P>
+          </div>
+          {markThirddata.map((item, index) => (
+            <div key={index}>
+              <div className="">
+                <div className="flex items-center gap-x-3 pt-5 font-bold">
+                  <item.icon className="size-7 text-blue-500" />
+                  <H4> {item.title}</H4>
+                </div>
+                <div className="mt-5 text-lg text-black">
+                  <P>{item.description}</P>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-10">
+        <div className="space-y-5 text-center">
+          <H1>Connect with your customers effectively</H1>
+          <div className="">
+            <P>
+              Distribute mobile responsive customer satisfaction surveys via web
+              links, emails, social media or QR codes and collect
+            </P>
+            <P>
+              results in real-time. Send by SMS, collect data offline or capture
+              data from web site visitors. Gather customer feedback
+            </P>
+            <P>anytime, anywhere.</P>
+          </div>
+        </div>
+        <div className="flex flex-wrap justify-center gap-6 py-16">
+          {markCarddata.map((item, index) => (
+            <Card
+              key={index}
+              className={cn(
+                "max-w-sm transform rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 p-4 shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2",
+              )}
+            >
+              <CardHeader className="flex items-center">
+                <div className="ml-3">
+                  <CardTitle className="flex items-center gap-x-3 font-bold">
+                    <item.icon className="size-7 text-blue-500" />
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription className="mt-5 text-lg text-black">
+                    {item.description}
+                  </CardDescription>
+                </div>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-5 py-10 text-center">
+        <H1 className="px-36">Reach the right audience for your research</H1>
+        <div className="">
+          <P>
+            ZettaSurvey’s Live Consumer Audience service gives you instant
+            access to more than 20
+          </P>
+          <P>
+            million respondents in over 70 countries. Interview any demographic
+            group, from general
+          </P>
+          <P>
+            consumers to niche audiences. Start getting real opinions from real
+            people.
+          </P>
+        </div>
+      </div>
     </div>
   );
 }

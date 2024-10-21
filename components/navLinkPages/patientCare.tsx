@@ -1,104 +1,109 @@
 import React from "react";
-import { PatientCareDesign } from "../patientCare";
 import {
-  MdOutlineCastForEducation,
-  MdOutlineHealthAndSafety,
-} from "react-icons/md";
-import { GiTrade } from "react-icons/gi";
-import { TbIrregularPolyhedronPlus } from "react-icons/tb";
-import { VscWorkspaceTrusted } from "react-icons/vsc";
-import { RiHealthBookLine, RiHomeOfficeLine } from "react-icons/ri";
-import { SiLocal } from "react-icons/si";
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import { H4 } from "@/components/ui/h4";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { H1 } from "@/components/ui/h1";
+import { P } from "@/components/ui/p";
+import { patientFirstData, patientSecondData } from "@/data/patientCare";
 
-  const patientFirstData = [
-    {
-      id: 1,
-      title: "Private healthcare",
-      icon: MdOutlineHealthAndSafety,
-      description:
-        "From medical clinicians and practices including GP surgeries, dentists, opticians and pharmacies to commercial healthcare providers. SmartSurvey works with a growing number of customers in private healthcare.Charities",
-    },
-    {
-      id: 2,
-      title: "Charities",
-      icon: RiHomeOfficeLine,
-      description:
-        "The charity and VCSE sector has an increasingly important role in communicating the needs of local service users and communities. It's why SmartSurvey is increasingly called upon to support this sector.",
-    },
-    {
-      id: 3,
-      title: "Educators",
-      icon: MdOutlineCastForEducation,
-      description:
-        "From large government agency's to specialist training hospitals, colleges and universities. SmartSurvey supports national and local educators at the forefront of the UK's healthcare training provision.",
-    },
-    {
-      id: 4,
-      title: "Healthwatch",
-      icon: RiHealthBookLine,
-      description:
-        "Giving patient's a sufficient voice is vital to raising standards across the healthcare industry. That's why SmartSurvey works with the UK's primary health and social care champion.",
-    },
-    {
-      id: 5,
-      title: "Local authorities",
-      icon: SiLocal,
-      description:
-        "Local authorities have an increasingly important role in collecting feedback from local service users. It's why more of them are coming to SmartSurvey, knowing we already have a strong and trusted presence in their sector.",
-    },
-    {
-      id: 6,
-      title: "Trade bodies",
-      icon: GiTrade,
-      description:
-        "To maintain industry standards, healthcare professionals as well as the patients they care for need a voice. It's why SmartSurvey supports trade bodies representing the industry's professions.",
-    },
-    {
-      id: 7,
-      title: "Regulatory bodies",
-      icon: TbIrregularPolyhedronPlus,
-      description:
-        "Regulatory bodies rely on effective data collection to gather patient feedback and maintain professional practitioner standards. It's another arm of the healthcare sector where SmartSurvey is strong.",
-    },
-    {
-      id: 8,
-      title: "NHS trusts",
-      icon: VscWorkspaceTrusted,
-      description:
-        "SmartSurvey works with a growing number of NHS Trusts and NHS Community Trusts, supporting them with key patient feedback initiatives including FFT.",
-    },
-  ];
-const patientSecondData = [
-  {
-    id: 1,
-    title: "We always prioritise your security",
-    img: "/staysafe.svg",
-    content:
-      "Adheres to the highest standards of IT security and data protection Put powerful customer insight in the hands of your operational teams, use APIs, web hooks or our native Salesforce integration to share feedback in the systems they already work in Complies with GDPR, the Data protection Act and the NHS Data Security and Protection Toolkit Is built by a software provider that is ISO27001 and Cyber Essentials Plus accredited",
-  },
-  {
-    id: 2,
-    title: "Smart security features for teams",
-    img: "/smartsecurity.svg",
-    content:
-      "Access control tools including Two-Factor Authentication (2FA) and password policies Team management features that include user permissions and a master user who can manage these permissions and the activities of sub-user accounts Password protection on survey report links that your teams share with others, so that its content can only be seen by those who need to view it",
-  },
-  {
-    id: 3,
-    title: "Drive more co-ordinated action and engagement",
-    img: "/Drivemoreco-ordinated.svg",
-    content:
-      "Create custom stakeholder reports and share real-time access to user stories and insight, without need for additional user licences Set up project teams of all shapes and sizes for success with the means to share templates, themes, and your preferred questions Empower team members to work more effectively and seamlessly together through detailed user permissions",
-  },
-];
-    
-export default function PatientCare() {
+export default function PatientCareDesign() {
   return (
-    <>
-      <PatientCareDesign
-        patientFirstData={patientFirstData}
-        patientSecondData={patientSecondData}
-      />
-    </>
+    <div className="container">
+      <div className="grid place-items-center py-16 lg:py-36">
+        <div className="h- grid items-center gap-x-2 gap-y-7 md:grid-cols-7">
+          <div className="col-span-3 space-y-7">
+            <H1>Patient Experience</H1>
+            <P className="">
+              In a changing healthcare environment, the need for timely and
+              reliable feedback remains a constant. With ZettaSurvey you can
+              quickly identify issues that matter most to service users,
+              communities and populations.
+            </P>
+
+            <div className="flex items-center gap-x-3">
+              <Button className="group">
+                Sign Up
+                <span className="ml-2 text-xl duration-300 group-hover:translate-x-1">
+                  <ArrowRight size={18} />
+                </span>
+              </Button>
+            </div>
+          </div>
+          <div className="col-span-4 h-[400px] w-full">
+            <div className="relative h-full w-full">
+              <Image src="/Patientexperience.svg" alt="hero-image" fill />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="space-y-10">
+        <div className="space-y-5 text-center">
+          <H1>Who’s using ZettaSurvey?</H1>
+          <div className="">
+            <P>
+              From public and private healthcare organisations to educators,
+              healthcare
+            </P>
+            <P>
+              bodies, charities and suppliers to the industry . Wherever you
+              work in
+            </P>
+            <P>
+              healthcare, we’ve got your feedback data collection needs covered.
+            </P>
+          </div>
+        </div>
+        <div className=" flex flex-wrap justify-center gap-6">
+          {patientFirstData.map((item, index) => (
+            <Card
+              key={index}
+              className={cn(
+                "max-w-sm transform p-4 shadow-[-1px_-1px_37px_0px_rgba(0,_0,_0,_0.1)] transition-transform duration-300 ease-in-out hover:-translate-y-2 rounded-lg border border-gray-200 bg-gradient-to-br from-white to-gray-50 ",
+              )}
+            >
+              <CardHeader className="flex items-center !text-black">
+                <div className="ml-3">
+                  <CardTitle className="flex items-center gap-x-3 font-bold">
+                    <item.icon className="size-7 text-blue-500" />
+                    {item.title}
+                  </CardTitle>
+                  <CardDescription className="mt-5 text-lg text-black">
+                    {item.description}
+                  </CardDescription>
+                </div>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+      </div>
+
+      <div className="space-y-7 pt-12">
+        {patientSecondData.map((item, ind) => (
+          <div
+            key={ind}
+            className="grid items-center gap-x-3 gap-y-3 md:grid-cols-2"
+          >
+            <div className={cn("space-y-2", ind % 2 !== 0 && "order-2")}>
+              <H4 className="font-bold">{item?.title}</H4>
+              <P className="pt-3 text-justify">{item.content}</P>
+            </div>
+            <div
+              className={cn("relative h-96 w-full", ind % 2 !== 0 && "order-1")}
+            >
+              <Image src={item.img} alt={item.title} fill />
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 }
