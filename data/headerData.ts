@@ -44,6 +44,6 @@ export const headerData = [
   },
   {
     name: "Pricing",
-    href: "/",
+    href: "/nav/pricing",
   },
 ];

@@ -23,12 +23,16 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-x-6">
           <ThemeSwitcher />
-          <Link href={"/sign-up"} className="flex items-center gap-x-2">
-            <Button variant={"secondary"} className="">
-              Sign in
-            </Button>
-            <Button>Sign up</Button>
-          </Link>
+          <div className="flex items-center gap-x-2">
+            <Link href={"https://surveydev.zettastack.com/login"}>
+              <Button variant={"secondary"} className="">
+                Sign in
+              </Button>
+            </Link>
+            <Link href={"/sign-up"}>
+              <Button>Sign up</Button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
