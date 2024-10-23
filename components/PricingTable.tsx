@@ -1,7 +1,7 @@
 import { features, featuresfrist, featuressecond } from '@/data/pricing'
 import React from 'react'
 import { BsCheckCircleFill } from 'react-icons/bs'
-function Featurestable() {
+export default function PricingTable() {
   return (
     <div className="table-bg-image p-10 capitalize">
       <h1 className="mt-3 text-center text-[40px] font-bold capitalize">
@@ -94,4 +94,4 @@ function Featurestable() {
   );
 }
 
-export default Featurestable
+ 

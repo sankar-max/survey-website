@@ -10,118 +10,17 @@ import {
 import { cn } from "@/lib/utils";
 import { H1 } from "@/components/ui/h1";
 import { P } from "@/components/ui/p";
-import { patientFirstData } from "@/data/pricing";
-import Featurestable from "../Featurestable";
+import { patientFirstData, plans } from "@/data/pricing";
+import Featurestable from "../PricingTable";
 import { H4 } from "../ui/h4";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@radix-ui/react-select";
+
 import { Button } from "../ui/button";
-import { BsCheckCircle } from "react-icons/bs";
-import { SiEnterprisedb, SiLinuxprofessionalinstitute } from "react-icons/si";
-import { LiaBusinessTimeSolid } from "react-icons/lia";
+import PricingTable from "../PricingTable";
 
 export default function pricing() {
   return (
-    <div className="container my-10">
-      <div className="flex gap-5">
-        <Card className="w-[350px]">
-          <div className="flex items-center py-6">
-            <P className="mx-6 py-3">
-              <SiEnterprisedb size={40} />{" "}
-            </P>
-            <div className="w-full rounded-s-full border bg-gradient-to-r from-blue-400 to-blue-700 py-3 text-center">
-              <P>Enterprise Plan</P>
-            </div>
-          </div>
-          <CardHeader>
-            <CardTitle>
-              <H4>$100/month Billed</H4>
-            </CardTitle>
-            <CardTitle>
-              <H4> $1200 Annually</H4>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2">
-              <BsCheckCircle className="text-red-400" />
-              <P>One named account user</P>
-            </div>
-            <P>Great for individuals who want to create simple surveys.</P>
-          </CardContent>
-          <CardFooter className="flex justify-center">
-            <Button className="rounded-full bg-gradient-to-r from-blue-400 to-blue-700 px-32 py-6">
-              Sign Up
-            </Button>
-          </CardFooter>
-        </Card>
-        <Card className="w-[350px]">
-          <div className="flex items-center py-6">
-            <P className="mx-6 py-3">
-              <LiaBusinessTimeSolid size={40} />{" "}
-            </P>
-            <div className="w-full rounded-s-full border bg-gradient-to-r from-blue-700 to-indigo-800 py-3 text-center">
-              <P>Business</P>
-            </div>
-          </div>
-          <CardHeader>
-            <CardTitle>
-              <H4>$100/month Billed</H4>
-            </CardTitle>
-            <CardTitle>
-              <H4> $1200 Annually</H4>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2">
-              <BsCheckCircle className="text-red-400" />
-              <P>One named account user</P>
-            </div>
-            <P>Great for individuals who want to create simple surveys.</P>
-          </CardContent>
-          <CardFooter className="flex justify-center">
-            <Button className="rounded-full bg-gradient-to-r from-blue-700 to-indigo-800 px-32 py-6">
-              Sign Up
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <Card className="w-[350px]">
-          <div className="flex items-center py-6">
-            <P className="mx-6 py-3">
-              <SiLinuxprofessionalinstitute size={40} />{" "}
-            </P>
-            <div className="w-full rounded-s-full border bg-gradient-to-r from-red-300 to-red-500 py-3 text-center">
-              <P>Professional</P>
-            </div>
-          </div>
-          <CardHeader>
-            <CardTitle>
-              <H4>$100/month Billed</H4>
-            </CardTitle>
-            <CardTitle>
-              <H4> $1200 Annually</H4>
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2">
-              <BsCheckCircle className="text-red-400" />
-              <P>One named account user</P>
-            </div>
-            <P>Great for individuals who want to create simple surveys.</P>
-          </CardContent>
-          <CardFooter className="flex justify-center">
-            <Button className="rounded-full bg-gradient-to-r from-red-300 to-red-500 px-32 py-6">
-              Sign Up
-            </Button>
-          </CardFooter>
-        </Card>
-      </div>
-      <div className="px-5 py-[150px]">
+    <div className="container my-10 space-y-10">
+      <div className="px-5 py-[10px]">
         <div className="space-y-5 py-24 text-center">
           <H1>Flexible Pricing for every business</H1>
           <P>
@@ -131,8 +30,45 @@ export default function pricing() {
           </P>
         </div>
       </div>
+
+      <div className="grid grid-cols-3 gap-5 py-6">
+        {plans.map((plan, index) => (
+          <Card
+            key={index}
+            className="shadow-[-1px_-1px_37px_0px_rgba(0,_0,_0,_0.1)]"
+          >
+            <div className="flex items-center py-6">
+              <P className="mx-6 py-3">{plan.icon}</P>
+              <div
+                className={`w-full rounded-s-full border bg-gradient-to-r ${plan.bgGradient} py-3 text-center`}
+              >
+                <P>{plan.name}</P>
+              </div>
+            </div>
+            <CardHeader>
+              <CardTitle>{plan.priceMonthly}</CardTitle>
+              <CardTitle>{plan.priceAnnually}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              {plan.features.map((feature, idx) => (
+                <div key={idx} className="flex items-center gap-2">
+                  <P className="text-red-400 my-4">{feature.icon && feature.icon}</P>
+                  <P>{feature.text}</P>
+                </div>
+              ))}
+            </CardContent>
+            <CardFooter className="flex justify-center">
+              <Button
+                className={`rounded-full bg-gradient-to-r ${plan.buttonGradient} px-32 py-6`}
+              >
+                {plan.buttonText}
+              </Button>
+            </CardFooter>
+          </Card>
+        ))}
+      </div>
       <div className="space-y-10">
-        <div className="space-y-5 text-center">
+        <div className="py-4 text-center">
           <H1>Frequently Asked Questions</H1>
         </div>
         <div className="flex flex-wrap justify-center gap-6">
@@ -159,7 +95,7 @@ export default function pricing() {
         </div>
       </div>
 
-      <Featurestable />
+      <PricingTable />
 
       <div className="px-5 py-[150px]">
         <div className="space-y-5 py-24 text-center">

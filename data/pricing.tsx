@@ -3,7 +3,60 @@ import {  RiSurveyLine } from "react-icons/ri";
 import { IoReloadSharp, IoTimerOutline } from "react-icons/io5";
 import { AiOutlineFileProtect, AiOutlineFileSync, AiOutlineFileText } from "react-icons/ai";
 import { BsCheckCircle } from "react-icons/bs";
+import { SiEnterprisedb, SiLinuxprofessionalinstitute } from "react-icons/si";
+import { LiaBusinessTimeSolid } from "react-icons/lia";
 
+
+export const plans = [
+  {
+    name: "Enterprise Plan",
+    icon: <SiEnterprisedb size={40} />,
+    bgGradient: "from-blue-400 to-blue-700",
+    priceMonthly: "$100/month Billed",
+    priceAnnually: "$1200 Annually",
+    features: [
+      {
+        icon: <BsCheckCircle className="text-red-400" />,
+        text: "One named account user",
+      },
+      { text: "Great for individuals who want to create simple surveys." },
+    ],
+    buttonText: "Sign Up",
+    buttonGradient: "from-blue-400 to-blue-700",
+  },
+  {
+    name: "Business",
+    icon: <LiaBusinessTimeSolid size={40} />,
+    bgGradient: "from-blue-700 to-indigo-800",
+    priceMonthly: "$100/month Billed",
+    priceAnnually: "$1200 Annually",
+    features: [
+      {
+        icon: <BsCheckCircle className="text-red-400" />,
+        text: "One named account user",
+      },
+      { text: "Great for individuals who want to create simple surveys." },
+    ],
+    buttonText: "Sign Up",
+    buttonGradient: "from-blue-700 to-indigo-800",
+  },
+  {
+    name: "Professional",
+    icon: <SiLinuxprofessionalinstitute size={40} />,
+    bgGradient: "from-red-300 to-red-500",
+    priceMonthly: "$100/month Billed",
+    priceAnnually: "$1200 Annually",
+    features: [
+      {
+        icon: <BsCheckCircle className="text-red-400" />,
+        text: "One named account user",
+      },
+      { text: "Great for individuals who want to create simple surveys." },
+    ],
+    buttonText: "Sign Up",
+    buttonGradient: "from-red-300 to-red-500",
+  },
+];
 export const patientFirstData = [
   {
     id: 1,
