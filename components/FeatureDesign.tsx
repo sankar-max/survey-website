@@ -10,7 +10,7 @@ type Props = {
 export const FeatureDesign = ({ item, ind }: Props) => {
   return (
     <div className="grid items-center gap-x-3 gap-y-3 md:grid-cols-2">
-      <div className={cn("space-y-2", ind % 2 !== 0 && "order-2")}>
+      <div className={cn("space-y-4", ind % 2 !== 0 && "order-2")}>
         <H4>{item?.title}</H4>
         <P>{item.description}</P>
       </div>

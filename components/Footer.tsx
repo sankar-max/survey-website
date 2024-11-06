@@ -28,7 +28,8 @@ const Footer = () => {
     <footer className="bg-[#003161]">
       <div className="container py-5 flex justify-between gap-x-4">
         <div className="flex gap-x-2 items-center">
-          <DiamondPercent size={30} className="text-white bg-gradient-to-r from-purple-500 to-indigo-500 rounded-full p-1" />
+          <DiamondPercent size={30} className="text-white 
+          bg-[linear-gradient(108.7deg,rgba(221,22,224,1)11%,rgba(111,22,190,1)88.2%)] rounded-full p-1" />
           <span className="text-white text-xl font-semibold">Zsurvey</span>
         </div>
         {footerContent.map((item) => (
@@ -55,7 +56,7 @@ const Footer = () => {
         </ul>
         <ul className="flex gap-x-4">
           {footerSocialIcons.map((item) => (
-            <Li key={item.title} className="!text-white border-2 border-white cursor-pointer rounded-full p-2 transition-all duration-300 ease-in-out hover:bg-gradient-to-r from-purple-500 to-indigo-500">
+            <Li key={item.title} className="!text-white border-2 border-white cursor-pointer rounded-full p-2 transition-all duration-300 ease-in-out  hover:bg-[linear-gradient(108.7deg,rgba(221,22,224,1)11%,rgba(111,22,190,1)88.2%)] hover:text-black">
               {item.icon}
             </Li>
           ))}
