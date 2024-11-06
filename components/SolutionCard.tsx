@@ -8,8 +8,8 @@ type Props = {
 export const SolutionCard = ({ item }: Props) => {
   return (
     <div className="flex-1 text-center">
-      <H4 className="">{item?.title}</H4>
-      <P className="py-3">{item.description}</P>
+      <H4 className=" !text-white">{item?.title}</H4>
+      <P className="py-3 !text-white">{item.description}</P>
     </div>
   );
 };

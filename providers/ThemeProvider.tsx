@@ -7,7 +7,7 @@ type Props = {
 };
 export const ThemeProvider = ({ children }: Props) => {
   return (
-    <NextThemeProvider attribute="class" defaultTheme="system" enableSystem>
+    <NextThemeProvider attribute="class" defaultTheme="dark" enableSystem>
       {children}
     </NextThemeProvider>
   );

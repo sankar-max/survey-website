@@ -8,9 +8,9 @@ type Props = {
 };
 export const EnterPriceCard = ({ item }: Props) => {
   return (
-    <Card>
-      <CardHeader className="space-y-3">
-        <CardTitle className="flex items-center gap-x-4 !text-xl font-bold">
+    <Card className="hover:scale-y-105 hover:shadow-gray-500 shadow-md shadow-gray-300 hover:cursor-pointer hover:transition-all ease-in-out duration-300">
+      <CardHeader className="space-y-3 pb-3">
+        <CardTitle className="flex items-center  gap-x-4 !text-xl font-bold">
           <span>
             <item.icon className="size-7 text-blue-500" />
           </span>

@@ -4,14 +4,14 @@ import { P } from "@/components/ui/p";
 import { HeroImage } from "@/public/assets/images/hero";
 import { ArrowRight } from "lucide-react";
 export const HeroSection = () => {
+ 
   return (
-    <div className="container grid place-items-center py-20 lg:py-40">
-      <div className="grid items-center gap-x-2 gap-y-7 md:grid-cols-7">
-        <div className="col-span-3 space-y-7">
-          <H1>A Better Future Uncover the difference you will make.</H1>
-          <P className="">
-            ZettaSurvey is packed with features to help you quickly and easily
-            reach respondents and capture feedback and opinions.
+    <div className=" flex  flex-col justify-end  pt-20 bg-[#0f0c29] bg-[linear-gradient(108.7deg,rgba(221,22,224,1)11%,rgba(111,22,190,1)88.2%)]">
+      <div className="grid  container items-center gap-x-2 gap-y-7 md:grid-cols-7">
+        <div className="col-span-3 space-y-7 ">
+          <H1 className="!text-white ">Power Your Decisions with Precise Data Collection.</H1>
+          <P className="!text-white text-2xl">
+          Transforming Data Collection into Actionable Insights
           </P>
 
           <div className="flex items-center gap-x-3">
@@ -36,6 +36,16 @@ export const HeroSection = () => {
             <HeroImage />
           </div>
         </div>
+      </div>
+      <div className=" w-full overflow-hidden leading-none transform rotate-180">
+        <svg
+          className="relative block w-[calc(139%+1.3px)] h-[194px]"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1200 120"
+            preserveAspectRatio="none"
+          >
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#FFFFFF"></path>
+          </svg>
       </div>
     </div>
   );

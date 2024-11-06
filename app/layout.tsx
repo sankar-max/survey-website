@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/providers/ThemeProvider";
-import { Work_Sans } from "next/font/google";
+import {  Work_Sans} from "next/font/google";
 
 const ZettaFont = Work_Sans({ subsets: ["latin"], variable: "--zetta-font" });
+
 
 export const metadata: Metadata = {
   title: "Survey",
